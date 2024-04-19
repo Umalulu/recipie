@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipe Search</title>
+    <link href="output.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
+  <body class="bg-slate-900 p-6">
+    <h1
+      class="text-3xl font-bold mb-6 text-center text-white underline decoration-sky-500"
+    >
+      Recipe Search
+    </h1>
+    <input
+      type="text"
+      id="query"
+      placeholder="Happy cooking!"
+      class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mb-7"
+      autofocus="autofocus"
+    />
+    <button
+      id="search"
+      class="bg-gradient-to-r from-green-200 to-blue-500 hover:from-pink-500 outline outline-offset-2 outline-2 outline-white hover:to-yellow-500 text-white font-bold py-2 px-8 rounded-full active:bg-black"
+      style="margin: 0 auto; display: block"
+    >
+      Search
+    </button>
+    <div id="results" class="mt-6"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#query").keypress(function (event) {
+          if (event.keyCode === 13) {
+            $("#search").click();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
