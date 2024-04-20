@@ -2,29 +2,36 @@
 <html>
   <head>
     <title>Recipe Search</title>
-    <link href="output.css" rel="stylesheet" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="src/output.css" rel="stylesheet" />
+    <link rel="icon" href="src/favicon.ico" type="image/x-icon" />
   </head>
   <body class="bg-slate-900 p-6">
     <h1
-      class="text-3xl font-bold mb-6 text-center text-white underline decoration-sky-500"
+      class="text-3xl font-bold mb-6 text-center text-white "
     >
       Recipe Search
     </h1>
     <input
       type="text"
       id="query"
-      placeholder="Happy cooking!"
+      placeholder="Enter dish or ingredient..."
       class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mb-7"
       autofocus="autofocus"
     />
-    <button
-      id="search"
-      class="bg-gradient-to-r from-green-200 to-blue-500 hover:from-pink-500 outline outline-offset-2 outline-2 outline-white hover:to-yellow-500 text-white font-bold py-2 px-8 rounded-full active:bg-black"
-      style="margin: 0 auto; display: block"
-    >
-      Search
-    </button>
+    <div class="flex justify-center">
+      <div class="relative inline-flex group mx-auto">
+        <div
+          class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-teal-400 via-cyan-300 to-blue-500 rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"
+        ></div>
+        <button
+          id="search"
+          class="relative inline-flex items-center justify-center px-4 py-2 font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+
     <div id="results" class="mt-6"></div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
